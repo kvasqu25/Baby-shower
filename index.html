@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Baby Vasquez</title>
+    <meta name="Karen Vasquez" content="">
+    <meta name="description" content="Baby Shower Invitation">
+
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="stylesheet" href="https://googleapis.com/css2?family=EB+Garamond:ital@1&display=swap">
+
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Stylesheets -->
+    <link href="styles.css" rel="stylesheet">
+    
+
+    <!-- JavaScript -->
+    <script src="scripts.js" defer></script>
+
+</head>
+
+<body id="top">
+    <canvas id="confetti-canvas"></canvas> 
+    <a href="#main" id="skip">Skip to Main Content</a>
+
+    <div class="invitation">
+        <header>
+            <video autoplay muted loop playsinline class="hero-video">
+            <source src="photos/baby-feet.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay">
+
+                <div class="hero-content">
+
+                    <p class="hero-small">
+                        Una pequeña sorpresa está en camino...
+                    </p>
+
+                    <h1>
+                        Baby Rivera
+                    </h1>
+
+                    <div class="hero-line"></div>
+
+                    <p class="hero-subtitle">
+                        Revelación de Género
+                    </p>
+
+                    <p class="hero-date">
+                        Sábado, 18 de diciembre de 2026
+                    </p>
+
+                </div>
+            </div>
+        </header>
+
+        <main id="main">
+        <section id="joinme">
+            <p class="intro">Con mucha alegría,</p>
+
+            <h2>Valeria & Daniel Rivera</h2>
+
+            <p>
+                te invitan a celebrar
+                <br>
+                la llegada de su bebé.
+            </p>
+        </section>
+
+        <section id="timeDate">
+            <div class="location-card">
+
+                <h2>Sábado, Diciembre 18, 2026</h2>
+
+                <p class="event-time">
+                    5:00 PM
+                </p>
+
+                <div class="location-divider"></div>
+
+                <h2>Ubicación</h2>
+
+                <p class="address">
+                    Lindsay Grove<br>
+                    1742 N Lindsay Rd<br>
+                    Mesa, AZ 85213
+                </p>
+
+                <img 
+                    src="photos/venue.jpg" 
+                    alt="Lindsay Grove"
+                >
+
+            </div>
+        </section>
+
+        <section id="dresscode">
+            <h2>¿De Qué Equipo Eres?</h2>
+
+            <h3>Ven vestido de acuerdo con tu predicción:</h3>
+
+            <p>
+                EQUIPO NIÑA: <span class="pink">Rosa</span>
+                <br>
+                o
+                <br>
+                EQUIPO NIÑO: <span class="blue">Azul</span>
+            </p>
+        </section>
+
+    <section id="countdown">
+
+        <video class="ultrasound-video" autoplay muted loop playsinline>
+            <source src="photos/ultrasound.mp4" type="video/mp4">
+        </video>
+
+        <div class="countdown-overlay"></div>
+
+        <div class="countdown-content">
+
+            <h2>La cuenta regresiva</h2>
+
+            <p class="countdown-intro">
+                Falta muy poco para descubrir...
+            </p>
+
+            <div class="timer">
+
+                <div class="time-box pink-box">
+                    <span id="days">00</span>
+                    <small>DÍAS</small>
+                </div>
+
+                <div class="time-box white-box">
+                    <span id="hours">00</span>
+                    <small>HORAS</small>
+                </div>
+
+                <div class="time-box blue-box">
+                    <span id="minutes">00</span>
+                    <small>MINUTOS</small>
+                </div>
+
+                <div class="time-box white-box">
+                    <span id="seconds">00</span>
+                    <small>SEGUNDOS</small>
+                </div>
+
+            </div>
+
+            <p class="countdown-question">
+                ¿NIÑA O NIÑO?
+            </p>
+
+        </div>
+
+    </section>
+
+    <section id="rsvp">
+
+        <div class="rsvp-content">
+
+            <p class="rsvp-small">Nos encantaría celebrar contigo</p>
+
+            <h2>¿Nos acompañas?</h2>
+
+            <div class="rsvp-line"></div>
+
+            <p class="rsvp-text">
+                Por favor confirma tu asistencia e indícanos
+                cuántas personas asistirán.
+            </p>
+
+            <div class="guest-section">
+
+                <p class="guest-label">Número de personas</p>
+
+                <div class="guest-counter">
+
+                    <button type="button" id="minusGuest" aria-label="Disminuir número de personas">
+                        −
+                    </button>
+
+                    <span id="guestCount">2</span>
+
+                    <button type="button" id="plusGuest" aria-label="Aumentar número de personas">
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+            <a href="#" id="whatsappRSVP" class="rsvp-button">
+                Confirmar asistencia
+            </a>
+
+            <p class="rsvp-note">
+                Tu confirmación se enviará por WhatsApp.
+            </p>
+
+        </div>
+
+    </section>
+
+
+        <!-- <section id="end">
+            <h2>
+            Every Summer Has a Story.<br>
+            This One Is Mine.
+            </h2>
+        </section> -->
+            
+        </main>
+
+        <footer>
+            <p>Copyright &copy; <span>2026</span> - Karen Vasquez</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

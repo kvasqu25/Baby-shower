@@ -1,0 +1,808 @@
+/*
+    http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0 | 20110126
+    License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+#skip {
+    display: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+html,
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+
+.invitation {
+    width: 100%;
+    max-width: 430px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+body {
+    background: #F8F5F1;
+    color: #3F3A36;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    line-height: 1.6;
+    text-align: center;
+    letter-spacing: 0.15em;
+}
+
+
+/* =========================================
+   INVITACIÓN
+   ========================================= */
+
+.invitation {
+    width: 100%;
+    max-width: 430px;
+    margin: 0 auto;
+    background: #F8F5F1;
+    overflow: hidden;
+}
+
+
+/* =========================================
+   CONFETTI
+   ========================================= */
+
+#confetti-canvas {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+header {
+    position: relative;
+
+    width: 100%;
+    height: 100dvh;
+    min-height: 100svh;
+
+    margin: 0;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+/* VIDEO PRINCIPAL */
+
+.hero-video {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    z-index: 0;
+}
+
+
+/* OSCURECER VIDEO */
+
+.hero-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.12),
+            rgba(0, 0, 0, 0.25)
+        );
+
+    z-index: 1;
+}
+
+
+/* CONTENIDO */
+
+.hero-content {
+    position: absolute;
+    z-index: 5;
+
+    top: 45%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 100%;
+    max-width: 430px;
+
+    padding: 30px;
+
+    text-align: center;
+}
+
+
+
+/* TEXTO SUPERIOR */
+
+.hero-small {
+    margin: 0 0 18px;
+
+    color: white;
+
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 500;
+
+    letter-spacing: 1.5px;
+
+    text-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.45);
+}
+
+
+/* NOMBRE */
+
+.hero-content h1 {
+    margin: 0;
+
+    color: white;
+
+    font-size: clamp(42px, 11vw, 58px);
+
+    font-weight: 500;
+    font-style: italic;
+
+    letter-spacing: 2px;
+
+    line-height: 1.1;
+
+    text-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.45);
+}
+
+
+/* LÍNEA */
+
+.hero-line {
+    width: 55px;
+    height: 1px;
+
+    margin: 22px auto;
+
+    background: white;
+
+    opacity: 0.9;
+}
+
+
+/* SUBTÍTULO */
+
+.hero-subtitle {
+    margin: 0;
+
+    color: white;
+
+    font-size: 18px;
+
+    font-style: italic;
+    font-weight: 500;
+
+    letter-spacing: 2px;
+
+    text-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.45);
+}
+
+
+/* FECHA */
+
+.hero-date {
+    margin: 22px 0 0;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-style: italic;
+    font-weight: 500;
+
+    letter-spacing: 1.5px;
+
+    text-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.45);
+}
+
+
+/* =========================================
+   MAIN
+   ========================================= */
+
+main {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================================
+   SECCIONES
+   ========================================= */
+
+section {
+    width: 100%;
+    margin: 0;
+    padding: 5px 30px;
+
+    background: #fff;
+}
+
+
+/* =========================================
+   INVITACIÓN
+   ========================================= */
+
+#joinme {
+    padding: 60px 30px;
+}
+
+
+#joinme .intro {
+    margin-bottom: 18px;
+    color: #525252;
+    font-size: 18px;
+}
+
+
+#joinme h2 {
+    margin-bottom: 18px;
+    font-size: 32px;
+    color: #66889A;
+    font-weight: 500;
+    line-height: 1.35;
+}
+
+
+#joinme p:last-child {
+    font-size: 18px;
+    line-height: 1.8;
+    margin: 0;
+    color: #403B38;
+}
+
+
+/* =========================================
+   FECHA / UBICACIÓN
+   ========================================= */
+
+/* #timeDate {
+    padding: 30px;
+    background: #F8F5F1;
+} */
+
+
+.location-card {
+    position: relative;
+
+    width: 100%;
+    padding: 45px 25px 30px;
+
+    background: rgba(255,255,255,.85);
+
+    border: 1px solid rgba(85,121,139,.25);
+    border-radius: 12px;
+
+    box-shadow: 0 8px 25px rgba(85,121,139,.08);
+}
+
+
+/* BORDE INTERIOR */
+
+.location-card::before {
+    content: "";
+
+    position: absolute;
+    inset: 9px;
+
+    /* border: 1px solid rgba(233,154,185,.35); */
+    border-radius: 7px;
+
+    pointer-events: none;
+}
+
+
+.location-card h2 {
+    position: relative;
+
+    margin-bottom: 18px;
+
+    color: #55798B;
+
+
+    font-size: 22px;
+    font-weight: 500;
+
+    line-height: 1.35;
+}
+
+
+.event-time {
+    position: relative;
+
+    font-size: 17px;
+    letter-spacing: 2px;
+}
+
+
+.location-divider {
+    width: 45px;
+    height: 1px;
+
+    margin: 28px auto;
+
+    background: #E99AB9;
+}
+
+
+.address {
+    position: relative;
+
+    font-size: 16px;
+    line-height: 1.8;
+    letter-spacing: 1.5px;
+}
+
+
+.location-card img {
+    position: relative;
+
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    margin: 30px auto 0;
+
+    border-radius: 5px;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,.12);
+}
+
+
+/* =========================================
+   DRESS CODE
+   ========================================= */
+
+#dresscode {
+    padding: 60px 30px;
+}
+
+
+#dresscode h2 {
+    text-transform: none;
+    margin: 0 0 20px;
+
+    color: #66889A;
+
+    font-size: 22px;
+    font-weight: 500;
+
+    line-height: 1.35;
+}
+
+
+#dresscode h3 {
+    margin: 0 0 25px;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.6;
+}
+
+
+#dresscode p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    color: #403B38;
+    font-weight: bold;
+}
+
+
+#dresscode .pink {
+    color: #E88BB5;
+    font-weight: bold;
+}
+
+
+#dresscode .blue {
+    color: #75C9EE;
+    font-weight: bold;
+}
+
+
+/* =========================================
+   CUENTA REGRESIVA
+   ========================================= */
+
+#countdown {
+    position: relative;
+    width: calc(100% - 24px);
+    max-width: 430px;
+    height: 300px;
+    margin: 20px auto;
+    overflow: hidden;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+/* VIDEO */
+
+.ultrasound-video {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    z-index: 0;
+}
+
+
+/* CAPA */
+
+.countdown-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(245,241,237,.62);
+
+    z-index: 1;
+}
+
+
+/* CONTENIDO */
+
+.countdown-content {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+
+    padding: 20px 12px;
+}
+
+
+.countdown-content h2 {
+    margin: 0 0 5px;
+    font-size: 22px;
+}
+
+
+.countdown-intro {
+    margin-bottom: 18px;
+    color: #403B38;
+    font-size: 16px;
+}
+
+
+/* TIMER */
+
+.timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 5px;
+
+    width: 100%;
+}
+
+
+/* CAJAS */
+
+.time-box {
+    width: calc((100% - 15px) / 4);
+    height: 85px;
+
+    border-radius: 6px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 3px 12px rgba(0,0,0,.15);
+}
+
+
+.pink-box {
+    background: #E99AB9;
+}
+
+
+.white-box {
+    background: rgba(255,255,255,.96);
+}
+
+
+.blue-box {
+    background: #8BCDE9;
+}
+
+
+.time-box span {
+    font-size: 29px;
+    font-weight: bold;
+    line-height: 1;
+    color: #55798B;
+}
+
+
+.pink-box span,
+.blue-box span {
+    color: white;
+}
+
+
+.time-box small {
+    margin-top: 6px;
+
+    font-size: 6px;
+    letter-spacing: 1px;
+
+    color: #403B38;
+}
+
+
+.pink-box small,
+.blue-box small {
+    color: white;
+}
+
+
+.countdown-question {
+    margin: 13px 0 0;
+
+    color: #55798B;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+
+/* =========================================
+   FINAL
+   ========================================= */
+
+#end {
+    padding: 60px 30px;
+}
+
+
+#end h2 {
+    margin: 0;
+
+    font-size: 22px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+    padding: 25px 15px 35px;
+
+    background: #F8F5F1;
+
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+/* =========================
+   RSVP
+========================= */
+
+#rsvp {
+    background: #FFFFFF;
+    padding: 35px 25px;
+    max-width: 430px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.rsvp-content {
+    max-width: 360px;
+    margin: 0 auto;
+}
+
+.rsvp-small {
+    margin: 0 0 8px;
+    font-size: .85rem;
+    color: #888;
+    letter-spacing: .12em;
+}
+
+#rsvp h2 {
+    margin: 0;
+    color: #5F7D8A;
+    font-size: 1.7rem;
+    font-weight: normal;
+}
+
+.rsvp-line {
+    width: 45px;
+    height: 1px;
+    background: #E88BB5;
+    margin: 15px auto 20px;
+}
+
+.rsvp-text {
+    margin: 0 auto;
+    max-width: 320px;
+    font-size: .95rem;
+    line-height: 1.7;
+    color: #555;
+    letter-spacing: .05em;
+}
+
+/* Contador */
+
+.guest-section {
+    margin-top: 28px;
+}
+
+.guest-label {
+    margin: 0 0 12px;
+    font-size: .85rem;
+    color: #777;
+    letter-spacing: .08em;
+}
+
+.guest-counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    margin-bottom: 28px;
+}
+
+.guest-counter button {
+    width: 38px;
+    height: 38px;
+    border: 1px solid #E8B6C9;
+    border-radius: 50%;
+    background: #FDF5F8;
+    color: #A85D7D;
+    font-family: 'Times New Roman', serif;
+    font-size: 1.4rem;
+    font-style: normal;
+    line-height: 1;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+.guest-counter button:hover {
+    background: #F8E4EC;
+    transform: scale(1.05);
+}
+
+#guestCount {
+    min-width: 35px;
+    font-size: 1.5rem;
+    color: #5F7D8A;
+    font-style: normal;
+    letter-spacing: .05em;
+}
+
+/* Botón */
+
+.rsvp-button {
+    display: inline-block;
+    padding: 13px 28px;
+    border: 1px solid #E88BB5;
+    border-radius: 30px;
+    background: #FDF5F8;
+    color: #9B5C77;
+    text-decoration: none;
+    font-size: .9rem;
+    letter-spacing: .08em;
+    transition: all .25s ease;
+}
+
+.rsvp-button:hover {
+    background: #E88BB5;
+    color: #FFFFFF;
+    transform: translateY(-2px);
+}
+
+.rsvp-note {
+    margin: 15px 0 0;
+    font-size: .7rem;
+    color: #999;
+    letter-spacing: .04em;
+}
