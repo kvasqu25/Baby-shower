@@ -367,6 +367,27 @@ section {
     box-shadow: 0 8px 25px rgba(85,121,139,.08);
 }
 
+.maps-button {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 10px 22px;
+    border: 1px solid #E88BB5;
+    border-radius: 30px;
+    background: #FDF7FA;
+    color: #8A6173;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: .85rem;
+    letter-spacing: .08em;
+    transition: all .25s ease;
+}
+
+.maps-button:hover {
+    background: #E88BB5;
+    color: white;
+    transform: translateY(-2px);
+}
 
 /* BORDE INTERIOR */
 
@@ -653,6 +674,44 @@ section {
 }
 
 
+/* calendario boton */
+
+.calendar-section {
+    margin-top: 22px;
+    text-align: center;
+}
+
+.calendar-text {
+    margin: 0 auto 15px;
+    max-width: 300px;
+    font-size: .8rem;
+    color: #888;
+    line-height: 1.6;
+    letter-spacing: .05em;
+}
+
+.calendar-button {
+    display: inline-block;
+    padding: 11px 22px;
+    border: 1px solid #AFC1C9;
+    border-radius: 30px;
+    background: #F7FAFB;
+    color: #5F7D8A;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: .85rem;
+    font-style: italic;
+    letter-spacing: .08em;
+    cursor: pointer;
+    transition: all .25s ease;
+}
+
+.calendar-button:hover {
+    background: #5F7D8A;
+    color: #FFFFFF;
+    transform: translateY(-2px);
+}
+
+
 /* =========================================
    FINAL
    ========================================= */
@@ -805,4 +864,80 @@ footer {
     font-size: .7rem;
     color: #999;
     letter-spacing: .04em;
+}
+
+
+/* Registry */
+
+#registry {
+    background: #F8F5F1;
+    padding: 35px 25px;
+    max-width: 430px;
+    margin: 0 auto;
+    text-align: center;
+    /* border-radius: 80px; 
+    margin-top: 25px; */
+ 
+}
+
+.registry-content {
+    max-width: 360px;
+    margin: 0 auto;
+}
+
+.registry-small {
+    margin: 0 0 8px;
+    font-size: .85rem;
+    color: #888;
+    letter-spacing: .12em;
+}
+
+#registry h2 {
+    margin: 0;
+    color: #5F7D8A;
+    font-size: 1.7rem;
+    font-weight: normal;
+}
+
+.registry-line {
+    width: 45px;
+    height: 1px;
+    background: #E88BB5;
+    margin: 15px auto 20px;
+}
+
+.registry-text {
+    max-width: 320px;
+    margin: 0 auto 25px;
+    font-size: .9rem;
+    line-height: 1.7;
+    color: #555;
+    letter-spacing: .05em;
+}
+
+.registry-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.registry-button {
+    display: inline-block;
+    width: 190px;
+    padding: 4px 4px;
+    border: 1px solid #b6d1e8;
+    border-radius: 30px;
+    background: #f7fbfd;
+    color: #5c7d9b;
+    text-decoration: none;
+    font-size: .85rem;
+    letter-spacing: .08em;
+    transition: all .25s ease;
+}
+
+.registry-button:hover {
+    background: #8bc4e8;
+    color: #FFFFFF;
+    transform: translateY(-2px);
 }

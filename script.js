@@ -132,7 +132,7 @@
 // 18 de diciembre de 2026 a las 5:00 PM
 
 const targetDate = new Date(
-    "December 18, 2026 17:00:00"
+    "December 19, 2026 17:00:00"
 ).getTime();
 
 
@@ -241,8 +241,8 @@ function updateRSVP() {
     const personText = guests === 1 ? "persona" : "personas";
 
     const message =
-        `Hola! 💕 Confirmo mi asistencia al Gender Reveal de Baby Rivera. ` +
-        `Seremos ${guests} ${personText}. 🩷🩵`;
+        `Hola! Confirmo mi asistencia al Gender Reveal de Baby Rivera. ` +
+        `Seremos ${guests} ${personText}.`;
 
     // Crear enlace de WhatsApp
     whatsappRSVP.href =
@@ -274,3 +274,63 @@ plusGuest.addEventListener("click", function () {
 
 // Crear el enlace inicial
 updateRSVP();
+
+
+const addToCalendar = document.getElementById("addToCalendar");
+
+addToCalendar.addEventListener("click", function () {
+
+    const event = {
+        title: "Baby Rivera — Revelación de Género",
+        description: "¡Ven a celebrar con nosotros la revelación de género de Baby Rivera!",
+        location: "Lindsay Grove, 1742 N Lindsay Rd, Mesa, AZ 85213",
+        start: "20261218T170000",
+        end: "20261218T200000"
+    };
+
+    const icsContent =
+`BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Baby Rivera//Gender Reveal//ES
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:${Date.now()}@baby-rivera
+DTSTAMP:${getICSDate(new Date())}
+DTSTART:${event.start}
+DTEND:${event.end}
+SUMMARY:${event.title}
+DESCRIPTION:${event.description}
+LOCATION:${event.location}
+END:VEVENT
+END:VCALENDAR`;
+
+    const blob = new Blob([icsContent], {
+        type: "text/calendar;charset=utf-8"
+    });
+
+    const url = URL.createObjectURL(blob);
+
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "Baby-Rivera-Gender-Reveal.ics";
+
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    URL.revokeObjectURL(url);
+});
+
+
+function getICSDate(date) {
+
+    return date.getUTCFullYear().toString() +
+        String(date.getUTCMonth() + 1).padStart(2, "0") +
+        String(date.getUTCDate()).padStart(2, "0") +
+        "T" +
+        String(date.getUTCHours()).padStart(2, "0") +
+        String(date.getUTCMinutes()).padStart(2, "0") +
+        String(date.getUTCSeconds()).padStart(2, "0") +
+        "Z";
+
+}
